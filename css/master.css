@@ -1,6 +1,7 @@
 /* Start Global Variable */
 :root {
     --main-color: #10CAB7;
+    --main-second-color: #2C4755;
     --main-background-color: #f6f6f6;
 }
 
@@ -44,6 +45,29 @@ body {
 }
 
 /* End Global Rules */
+
+/* Start Components */
+.special-heading {
+    text-align: center;
+}
+
+.special-heading h2 {
+    font-size: 100px;
+    color: #f6f6f6;
+    margin: 0;
+}
+
+.special-heading h2+p {
+    margin: -30px 0 0 0;
+}
+
+@media (max-width : 767px) {
+    .special-heading h2 {
+        font-size: 60px;
+    }
+}
+
+/* Start Components */
 
 /* Start Header  */
 .header {
@@ -118,6 +142,7 @@ body {
 
 .header .container .links:hover ul {
     display: block;
+    z-index: 1;
 }
 
 .header .container .links ul::before {
@@ -160,3 +185,84 @@ body {
 
 
 /* End  Header  */
+/* Start Landing   */
+.landing {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.landing .text {
+    background-image: url("../images/landing.jpg");
+    background-size: cover;
+    height: calc(100vh - 70px);
+
+    position: relative;
+
+}
+
+.landing .text {
+    position: relative;
+    margin-bottom: 50px;
+
+}
+
+.landing .text .title {
+
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.landing .text .title h2 {
+    color: var(--main-color);
+    font-size: 60px;
+    font-weight: bold;
+
+}
+
+.landing .text .title p {
+    font-size: 20px;
+    color: #333;
+}
+
+.landing .description {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+
+
+}
+
+.landing .description .desc {
+    text-align: center;
+    padding: 40px;
+
+}
+
+.landing .description .desc i {
+    color: var(--main-color);
+    font-size: 80px;
+}
+
+.landing .description .desc h3 {
+    font-size: 30px;
+    color: #333;
+}
+
+.landing .description .desc p {
+    color: #333;
+    font-size: 18px;
+}
+
+/* End Landing  */
+
+/* Start services  */
+.services {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.services .
+/* End services  */
