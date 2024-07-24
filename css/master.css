@@ -272,13 +272,20 @@ body {
 }
 
 .services .service-content img {
+
     max-width: 300px;
 }
 
 .services .service-content .col .srv {
     display: flex;
     justify-content: space-between;
+}
 
+@media (max-width : 767px) {
+    .services .service-content .col .srv {
+        flex-direction: column;
+        text-align: center;
+    }
 
 }
 
@@ -291,9 +298,56 @@ body {
     margin-left: 30px;
 }
 
+@media (max-width : 767px) {
+    .services .service-content .col .srv .text {
+        margin-left: 0;
+    }
+}
+
 .services .service-content .col .srv .text h3 {
     margin-top: 0;
     font-weight: bold;
 }
 
+@media (max-width : 767px) {
+    .services .service-content .col .srv .text h3 {
+        margin-top: 20px;
+    }
+}
+
+.services .service-content .image {
+    position: relative;
+}
+
+@media (max-width : 767px) {
+    .services .service-content .image {
+        text-align: center;
+    }
+}
+
+.services .service-content .image::after {
+    content: "";
+    position: absolute;
+    background-color: #333;
+    width: 80px;
+    height: calc(100% + 80px);
+    top: -40px;
+    right: 20px;
+    z-index: -1;
+}
+
+@media (max-width :767px) {
+    .services .service-content .image::after {
+        display: none;
+    }
+}
+
 /* End services  */
+
+/* Start portfolio */
+.portfolio {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* End portfolio */
